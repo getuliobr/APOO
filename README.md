@@ -1,2 +1,2 @@
 # APOO
-Atividades de Análise e Projeto Orientado a Objetos
+Atividades de Análise e Projeto Orientado a Objetos - APOO
