@@ -48,7 +48,7 @@ class Keyboard {
 class CPU: public Keyboard, public Display {
   private:
     char operationInQueue = '.';
-    bool overwrittable = false;
+    bool overwritable = false;
     float registers[2] = {0, 0};
     
     void resetFirstRegister() {
