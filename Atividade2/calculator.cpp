@@ -61,19 +61,19 @@ class CPU: public Keyboard, public Display {
     }
 
     void updateDecimals(int registerNumber, int number) {
-      if(overwrittable && registerNumber == 0) {
+      if(overwritable && registerNumber == 0) {
         registers[registerNumber] = 0;
         digitsInDecimals = 0;
-        overwrittable = false;
+        overwritable = false;
       }
       registers[registerNumber] += number/pow(10, digitsInDecimals);
       digitsInDecimals++;
     }
 
     void updateNumber(int registerNumber, int number) {
-      if(overwrittable && registerNumber == 0) {
+      if(overwritable && registerNumber == 0) {
         registers[registerNumber] = 0;
-        overwrittable = false;
+        overwritable = false;
       }
       registers[registerNumber] = registers[registerNumber] * 10 + number;
     }
@@ -190,7 +190,7 @@ class CPU: public Keyboard, public Display {
       if(registers[0] < 0) throw "No sqrt of a negative number";
       registers[0] = sqrt(registers[0]);
       updateDisplay(0);
-      overwrittable = true;
+      overwritable = true;
     }
 
     void pressPercentage() {
